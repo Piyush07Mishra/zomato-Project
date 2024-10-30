@@ -1,0 +1,155 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #d32f2f;
+    color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 100px;
+}
+
+header ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+header ul li a.active,
+header ul li a:hover {
+    background-color: #b71c1c;
+    color: #fff;
+}
+
+/* Main Section Styling with Background Image */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px;
+    background-image: url('../image/bg.png'), linear-gradient(rgba(224, 224, 224, 0.8), rgba(224, 224, 224, 0.8));
+    background-size: cover;
+    text-align: center;
+    color: #333;
+    min-height: 70vh;
+    width: 100%;
+}
+
+main img {
+    width: 150px;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+main p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #d32f2f;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+main input {
+    padding: 12px;
+    width: 80%;
+    max-width: 500px;
+    border: 2px solid #d32f2f;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+/* Additional Section Styling */
+section.about {
+    width: 100%;
+    padding: 50px 20px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    color: #d32f2f;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    background-color: #d32f2f;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Animations */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    main input {
+        width: 90%;
+    }
+}
